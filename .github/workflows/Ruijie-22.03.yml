@@ -21,7 +21,8 @@ on:
         options:
           - 'K2P'
           - 'K2'
-          - 'miwifi-3c'
+          - 'phicomm_psg1218a'
+          - 'miwifi-3c' 
           - 'miwifi-3x'    
           - 'miwifi-mini'    
           - 'miwifi-4c' 
