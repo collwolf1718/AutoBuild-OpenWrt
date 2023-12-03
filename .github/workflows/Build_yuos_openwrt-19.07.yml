@@ -26,10 +26,9 @@ on:
           - 'miwifi-r3x'
           - 'miwifi-3a'
           - 'miwifi-3c'
-          - 'mir4a-100m'
+          - 'k22'
           - 'miwifi-4c'
           - 'psg1218a'
-           - 'k22'
       UPLOAD_BIN_DIR:
         type: boolean
         description: '上传bin文件夹'
