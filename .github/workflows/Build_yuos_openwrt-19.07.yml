@@ -29,6 +29,7 @@ on:
           - 'mir4a-100m'
           - 'miwifi-4c'
           - 'psg1218a'
+           - 'k22'
       UPLOAD_BIN_DIR:
         type: boolean
         description: '上传bin文件夹'
