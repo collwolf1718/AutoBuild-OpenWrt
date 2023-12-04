@@ -26,7 +26,7 @@ on:
           - 'miwifi-r3x'
           - 'miwifi-3a'
           - 'miwifi-3c'
-          - 'k22'
+          - 'phicomm_psg1218a'
           - 'miwifi-4c'
           - 'psg1218a'
       UPLOAD_BIN_DIR:
