@@ -11,15 +11,15 @@
 #=================================================
 
 # 修改默认IP
-sed -i 's/192.168.1.1/10.32.0.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.110.1/g' package/base-files/files/bin/config_generate
 # 修改网关
-sed -i 's/192.168.$((addr_offset++)).1/10.32.$((addr_offset++)).1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.$((addr_offset++)).1/192.168.$((addr_offset++)).1/g' package/base-files/files/bin/config_generate
 
 # 修改主机名称
-sed -i 's/OpenWrt/Yuos/g' package/base-files/files/bin/config_generate
+### sed -i 's/OpenWrt/Yuos/g' package/base-files/files/bin/config_generate##
 
 # 修改版本号
-# sed -i "s/OpenWrt/小渔学长 build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" package/default-settings/files/zzz-default-settings
+### sed -i "s/OpenWrt/小渔学长 build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" package/default-settings/files/zzz-default-settings##
 
 
 # Add kernel build user
