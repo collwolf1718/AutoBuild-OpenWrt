@@ -17,7 +17,7 @@ on:
       model:
         description: '选择机型'
         required: true
-        default: 'miwifi-3c' 
+        default: 'psg1218a' 
         type: choice
         options:
           - 'miwifi-nano'
@@ -127,12 +127,12 @@ jobs:
           cp -rf $GITHUB_WORKSPACE/patchs/xray/1.5.5/xray feeds/helloworld/xray-core/xray
           cp -rf $GITHUB_WORKSPACE/patchs/xray/1.5.5/xray feeds/packages/net/xray-core/xray
 
-    - name: 降级fullconenat-nft
-      run: |
-          cd openwrt
-          rm -rf feeds/small8/fullconenat
-          rm -rf feeds/small8/fullconenat-nft
-          cp -rf $GITHUB_WORKSPACE/patchs/firewall/fullconenat package/fullconenat
+    - ## name: 降级fullconenat-nft
+      ## run: |
+      ##    cd openwrt
+      ##    rm -rf feeds/small8/fullconenat
+      ##    rm -rf feeds/small8/fullconenat-nft
+      ##    cp -rf $GITHUB_WORKSPACE/patchs/firewall/fullconenat package/fullconenat
 
     - name: 安装插件
       run: cd openwrt && ./scripts/feeds install -a
