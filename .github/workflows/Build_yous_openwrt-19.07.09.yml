@@ -118,8 +118,8 @@ jobs:
     - name: 更新插件
       run: cd openwrt && ./scripts/feeds update -a
 
-     - name: 设置xray1.7.2
-     run: |
+    - name: 设置xray1.7.2
+         run: |
       cd openwrt
       cp -rf $GITHUB_WORKSPACE/patchs/xray/1.7.2/Makefile feeds/helloworld/xray-core/Makefile
       cp -rf $GITHUB_WORKSPACE/patchs/xray/1.7.2/Makefile feeds/packages/net/xray-core/Makefile 
