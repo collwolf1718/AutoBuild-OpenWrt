@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 # Modified for lean/openwrt
 
-name: 云编译适配19.07的小米路由器
+name: 适配19.07的MTK路由器
 
 on:
   repository_dispatch:
