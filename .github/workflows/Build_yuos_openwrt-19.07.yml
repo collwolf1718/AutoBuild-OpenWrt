@@ -127,7 +127,7 @@ jobs:
           cp -rf $GITHUB_WORKSPACE/patchs/xray/1.5.5/xray feeds/helloworld/xray-core/xray
           cp -rf $GITHUB_WORKSPACE/patchs/xray/1.5.5/xray feeds/packages/net/xray-core/xray
 
-    - ## name: 降级fullconenat-nft
+    - name: 降级fullconenat-nft
       ## run: |
       ##    cd openwrt
       ##    rm -rf feeds/small8/fullconenat
