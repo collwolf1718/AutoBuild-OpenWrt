@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 # Modified for lean/openwrt
 
-name: 云编译适配19.07的mtk路由器
+name: 云编译适配19.07的小米路由器
 
 on:
   repository_dispatch:
@@ -68,7 +68,7 @@ env:
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: config/19.07/Yuos_${{ github.event.inputs.model }}.config
   DIY_P1_SH: diy-part4.sh
-#  DIY_P2_SH: diy-part5.sh
+  DIY_P2_SH: diy-part5.sh
 #  UPLOAD_BIN_DIR: true
 #  UPLOAD_FIRMWARE: true
 #  UPLOAD_COWTRANSFER: false
@@ -117,6 +117,15 @@ jobs:
 
     - name: 更新插件
       run: cd openwrt && ./scripts/feeds update -a
+
+    - name: 设置xray1.7.2
+      run: |
+          cd openwrt
+          cp -rf $GITHUB_WORKSPACE/patchs/xray/1.7.2/Makefile feeds/helloworld/xray-core/Makefile
+          cp -rf $GITHUB_WORKSPACE/patchs/xray/1.7.2/Makefile feeds/packages/net/xray-core/Makefile 
+
+          cp -rf $GITHUB_WORKSPACE/patchs/xray/1.5.5/xray feeds/helloworld/xray-core/xray
+          cp -rf $GITHUB_WORKSPACE/patchs/xray/1.5.5/xray feeds/packages/net/xray-core/xray
 
     - name: 降级fullconenat-nft
       run: |
