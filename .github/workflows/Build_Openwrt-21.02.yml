@@ -26,6 +26,7 @@ on:
           - 'miwifi-mini'
           - 'miwifi-3'
           - 'miwifi-3x'
+          - 'E8820v2'
           - 'E8820v2_128m'
           - 'x86'   
       UPLOAD_BIN_DIR:
@@ -117,14 +118,7 @@ jobs:
       run: |
           cd openwrt
           cp -rf $GITHUB_WORKSPACE/patchs/xray/1.7.5/Makefile feeds/helloworld/xray-core/Makefile
-          cp -rf $GITHUB_WORKSPACE/patchs/xray/1.7.5/Makefile feeds/packages/net/xray-core/Makefile 
-
-    - name: 降级fullconenat-nft
-      run: |
-          cd openwrt
-          rm -rf feeds/small8/fullconenat
-          rm -rf feeds/small8/fullconenat-nft
-          cp -rf $GITHUB_WORKSPACE/patchs/firewall/fullconenat package/fullconenat
+          cp -rf $GITHUB_WORKSPACE/patchs/xray/1.7.5/Makefile feeds/packages/net/xray-core/Makefile
 
     - name: 安装插件
       run: cd openwrt && ./scripts/feeds install -a
